@@ -1,12 +1,15 @@
 import { useState } from 'react'
-import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      
+    <section>
+      <div className='flex justify-center item-center content-center'>
+        <p className='text-white font-bold text-4xl'>José A. Escalona G.</p>
+      </div>
+    </section>
+
     </>
   )
 }
