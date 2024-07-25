@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontSize: {
+      's': '9px'
+    },
     fontFamily: {
       'body': [
     'Inter', 

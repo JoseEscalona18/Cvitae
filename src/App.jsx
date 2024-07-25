@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-scroll';
 
 function App() {
   return (
@@ -6,8 +7,12 @@ function App() {
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"/>
 
     <header className='flex flex-col justify-center items-center text-center mt-12'>
-      <ul className='flex gap-5 text-white bg-blue-900/15 px-3 py-1 rounded-full shadow-2xl shadow-blue-500/20'>
-        <li><a href="#formacion">Formación</a></li>
+      <ul className='flex gap-5 text-white bg-blue-800/50 px-3 py-1 rounded-full shadow-2xl shadow-blue-500/20 text-s sm:text-base'>
+        <li>
+          <Link to="formacion" smooth={true} duration={500} className="hover:text-gray-400 transition-colors duration-300 cursor-pointer">
+            Formación
+          </Link>
+        </li>
         <li><a href="#">Experiencias</a></li>
         <li><a href="#">Referencias</a></li>
         <li><a href="#">Conocimientos</a></li>
@@ -67,39 +72,39 @@ function App() {
     
     <section>
 
-    <h1 id='formacion' className='text-center font-bold text-5xl text-white mb-10'> Formación </h1>
-    <div class="grid grid-cols-3 grid-rows-5 text-white max-w-[1200px] p-6 mx-auto border-4 rounded-md border-blue-500/20 shadow-blue-500/20">
-      <div class="col-span-1 row-span-1 flex items-center justify-end font-bold">2007 - 2013</div>
-      <div class="col-span-1 row-span-5 flex items-center justify-center py-10"><img src="../linea.webp" alt="Linea" className='max-h-96'/></div>
-      <div class="col-span-1 row-span-1 flex items-center justify-left"> 
+    <h1 id='formacion' className='text-center font-bold text-4xl text-white mb-1 sm:mb-10'> Formación </h1>
+    <div class="grid grid-cols-3 grid-rows-5 text-white max-w-[1200px] p-6 mx-auto rounded-md border-4 border-blue-900/20 shadow-[0_20px_50px_rgba(8,_112,_184,_0.05)] scale-90 text-s sm:text-base">
+      <div class="col-span-1 row-span-1 flex items-center justify-end font-bold py-2 sm:py-0">2007 - 2013</div>
+      <div class="col-span-1 row-span-5 flex items-center justify-center sm:py-10"><img src="../linea.webp" alt="Linea" className='max-h-[400px] sm:max-h-96'/></div>
+      <div class="col-span-1 row-span-1 flex items-center justify-left py-2 sm:py-0"> 
         <div>
           <h4 className='font-bold'>U.E Hna “María Sorrosal”</h4>
           <p>Educación Primaria.</p>
         </div>
       </div>
-      <div class="col-span-1 row-span-1 flex items-center justify-end font-bold">2013 - 2015</div>
-      <div class="col-span-1 row-span-1 flex items-center justify-left">
+      <div class="col-span-1 row-span-1 flex items-center justify-end font-bold py-2 sm:py-0">2013 - 2015</div>
+      <div class="col-span-1 row-span-1 flex items-center justify-left py-2 sm:py-0">
         <div>
           <h4 className='font-bold'>Escuela Técnica Comercial “Madre Rafols”</h4>
           <p>Educación básica (1ero, 2do y 3er año).</p>
         </div>
       </div>
-      <div class="col-span-1 row-span-1 flex items-center justify-end font-bold">2015 - 2019</div>
-      <div class="col-span-1 row-span-1 flex items-center justify-left">
+      <div class="col-span-1 row-span-1 flex items-center justify-end font-bold py-2 sm:py-0">2015 - 2019</div>
+      <div class="col-span-1 row-span-1 flex items-center justify-left py-2 sm:py-0">
         <div>
           <h4 className='font-bold'>Escuela Técnica Comercial “Madre Rafols”</h4>
           <p>Egresado como Técnico Medio en comercio y servicios administrativos mención Informática.</p>
         </div>
       </div>
-      <div class="col-span-1 row-span-1 flex items-center justify-end font-bold">2020</div>
-      <div class="col-span-1 row-span-1 flex items-center justify-left">
+      <div class="col-span-1 row-span-1 flex items-center justify-end font-bold py-2 sm:py-0">2020</div>
+      <div class="col-span-1 row-span-1 flex items-center justify-left py-2 sm:py-0">
         <div>
           <h4 className='font-bold'>Instituto Universitario de Tecnología Industrial Rodolfo Loreo Arismendi (IUTIRLA)</h4>
           <p>Cursado el primer semestre de Diseño gráfico.</p>
         </div>
       </div>
-      <div class="col-span-1 row-span-1 flex items-center justify-end font-bold">2021 - ACTUALIDAD</div>
-      <div class="col-span-1 row-span-1 flex items-center justify-left">
+      <div class="col-span-1 row-span-1 flex items-center justify-end font-bold py-2 sm:py-0">2021 - ACTUALIDAD</div>
+      <div class="col-span-1 row-span-1 flex items-center justify-left py-2 sm:py-0">
         <div>
           <h4 className='font-bold'>Universidad Valle del Momboy</h4>
           <p>Cursando actualmente el 8to semestre en ingeniería en computación.</p>
@@ -108,26 +113,6 @@ function App() {
     </div>
 
     </section>
-
-      {/*
-      <section>
-        <div className='flex'>
-          <div>
-            <div class="flex items-center justify-center">2007 - 2013</div>
-            <div class="flex items-center justify-center">2013 - 2015</div>
-            <div class="flex items-center justify-center">2015 - 2019</div>
-            <div class="flex items-center justify-center">2020</div>
-            <div class="flex items-center justify-center">2021 - ACTUALIDAD</div>
-          </div>
-          <div>
-            <div class="flex items-center justify-center py-10"><img src="../linea.webp" alt="Linea" className='max-h-96'/></div>
-          </div>
-          <div>
-
-          </div>
-        </div>
-      </section>
-            */}
     </>
   )
 }
