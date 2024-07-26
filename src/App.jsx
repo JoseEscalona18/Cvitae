@@ -1,10 +1,16 @@
 import { useState } from 'react'
 import { Link } from 'react-scroll';
+import { useMediaQuery } from 'react-responsive';
 
 function App() {
+
+  const isSmallScreen = useMediaQuery({ maxWidth: 640 });
+  console.log(isSmallScreen)
+  
   return (
     <>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></link>
 
     <header className='flex flex-col justify-center items-center text-center mt-12'>
       <ul className='flex gap-5 text-white bg-blue-800/50 px-3 py-1 rounded-full shadow-2xl shadow-blue-500/20 text-s sm:text-base'>
@@ -13,10 +19,15 @@ function App() {
             Formación
           </Link>
         </li>
-        <li><a href="#">Experiencias</a></li>
-        <li><a href="#">Referencias</a></li>
-        <li><a href="#">Conocimientos</a></li>
-        <li><a href="#">Proyectos</a></li>
+        <Link to="experiencias" smooth={true} duration={500} className="hover:text-gray-400 transition-colors duration-300 cursor-pointer">
+          Experiencias
+          </Link>
+          <Link to="conocimientos" smooth={true} duration={500} className="hover:text-gray-400 transition-colors duration-300 cursor-pointer">
+          Conocimientos
+          </Link>
+          <Link to="proyectos" smooth={true} duration={500} className="hover:text-gray-400 transition-colors duration-300 cursor-pointer">
+          Proyectos
+          </Link>
       </ul>
     </header>
 
@@ -70,10 +81,10 @@ function App() {
       <p> </p>
     </section>
     
-    <section>
+    <section id='formacion'>
 
-    <h1 id='formacion' className='text-center font-bold text-4xl text-white mb-1 sm:mb-10'> Formación </h1>
-    <div class="grid grid-cols-3 grid-rows-5 text-white max-w-[1200px] p-6 mx-auto rounded-md border-4 border-blue-900/20 shadow-[0_20px_50px_rgba(8,_112,_184,_0.05)] scale-90 text-s sm:text-base">
+    <h1 className='text-center font-bold text-4xl text-white'> Formación </h1>
+    <div class="grid grid-cols-3 grid-rows-5 text-white max-w-[1200px] p-6 mx-auto rounded-md border-4 border-blue-900/20 shadow-[0_20px_50px_rgba(8,_112,_184,_0.05)] scale-90 text-s sm:text-base m-5">
       <div class="col-span-1 row-span-1 flex items-center justify-end font-bold py-2 sm:py-0">2007 - 2013</div>
       <div class="col-span-1 row-span-5 flex items-center justify-center sm:py-10"><img src="../linea.webp" alt="Linea" className='max-h-[400px] sm:max-h-96'/></div>
       <div class="col-span-1 row-span-1 flex items-center justify-left py-2 sm:py-0"> 
@@ -112,6 +123,179 @@ function App() {
       </div>
     </div>
 
+    </section>
+
+    <section id="experiencias">
+      <h1 className='text-center font-bold text-4xl text-white mb-5 sm:mb-5'> Experiencias </h1>
+
+      <div className='flex flex-col sm:flex-row h-auto w-full items-center justify-center gap-[50px] text-white'>
+
+        <div className="flex flex-col bg-blue-900/20 drop-shadow-[0_0_10px_rgba(0,0,0,0.3)] rounded-[10px] h-[390px] w-[250px] shadow-2xl shadow-blue-500/20 transition-all duration-300 ease-in-out hover:transition-all hover:duration-300 hover:ease-in-out hover:scale-101">
+            
+          <div>
+            <img src="../serviteco.webp" className='w-full h-full object-cover' alt="Serviteco C.A"/>
+          </div>
+
+          <div className="h-[50%] p-[20px_15px] flex flex-col justify-between">
+            <div>
+              <h2 className='mb-[10px] font-bold'>Serviteco C.A</h2>
+              <ul className='text-[11px] flex flex-col gap-2'>
+                <li><b>Años de labor:</b> 2016 - 2017</li>
+                <li><b>Cargo ocupado:</b> Técnico en computación</li>
+                <li><b>Tareas realizadas:</b> Atención a clientes, reparación de computadoras y laptops, instalación de software de computadoras y laptops.</li>
+                <li><b>Referencia laboral:</b> Pedro Corredor +58 412-7638383</li>
+              </ul>
+            </div>
+              
+          </div>
+
+        </div>
+
+        <div className="flex flex-col bg-blue-900/20 drop-shadow-[0_0_10px_rgba(0,0,0,0.3)] rounded-[10px] h-[390px] w-[250px] shadow-2xl shadow-blue-500/20 transition-all duration-300 ease-in-out hover:transition-all hover:duration-300 hover:ease-in-out hover:scale-101">  
+            
+            <div>
+              <img src="../vencable.png" className='w-full h-full object-cover' alt="Vencable TV"/>
+            </div>
+  
+            <div className="h-[50%] p-[20px_15px] flex flex-col justify-between">
+                
+            <div>
+              <h2 className='mb-[10px] font-bold'>Comunicaciones RG5060 C.A (VenCable TV)</h2>
+              <ul className='text-[11px] flex flex-col gap-2'>
+                <li><b>Años de labor:</b> 2020 - 2021</li>
+                <li><b>Cargo ocupado:</b> Operador de Sistemas.</li>
+                <li><b>Tareas realizadas:</b> Atención a clientes y recaudador</li>
+                <li><b>Referencia laboral:</b> Lic. Zoraida Pérez +58 416-7778952</li>
+              </ul>
+            </div>
+                
+            </div>
+  
+          </div>
+
+          <div className="flex flex-col bg-blue-900/20 drop-shadow-[0_0_10px_rgba(0,0,0,0.3)] rounded-[10px] h-[390px] w-[250px] shadow-2xl shadow-blue-500/20 transition-all duration-300 ease-in-out hover:transition-all hover:duration-300 hover:ease-in-out hover:scale-101">
+            
+            <div>
+              <img src="../holanet.png" className='w-full h-full object-cover' alt="Holanet C.A"/>
+            </div>
+  
+            <div className="h-[50%] p-[20px_15px] flex flex-col justify-between">
+                
+            <div>
+              <h2 className='mb-[10px] font-bold'>Holanet C.A</h2>
+              <ul className='text-[11px] flex flex-col gap-2'>
+                <li><b>Años de labor:</b> 2023 - ACTUALIDAD</li>
+                <li><b>Cargo ocupado:</b> Soporte técnico</li>
+                <li><b>Tareas realizadas:</b> Operador de sistemas, gestión de redes, monitoreo de equipos de redes, soporte técnico</li>
+                <li><b>Referencia laboral:</b> Holanet C.A +58 412-2367899</li>
+              </ul>
+            </div>
+                
+            </div>
+  
+          </div>
+
+      </div>
+    </section>
+
+    <section id='conocimientos'>
+    <h1 className='text-center font-bold text-4xl text-white mt-10 mx-24'> Conocimientos y atributos </h1>
+    <div className="bg-blue-900/10 rounded-lg shadow-2xl shadow-blue-500/20 m-10 p-6 text-white">
+      <ul className='flex flex-col gap-5 text-center'>
+        <li className="flex items-center justify-center gap-3">
+          <i className='bx bx-check text-blue-900 text-[20px]'></i>
+          <span>Experiencia en atención al cliente</span>
+        </li>
+        <li className="flex items-center justify-center gap-3">
+          <i className='bx bx-check text-blue-900 text-[20px]'></i>
+          <span>Aplicaciones Microsoft (Word, Excel, Power Point, Publisher)</span>
+        </li>
+        <li className="flex items-center justify-center gap-3">
+          <i className='bx bx-check text-blue-900 text-[20px]'></i>
+          <span>Reparación de computadoras</span>
+        </li>
+        <li className="flex items-center justify-center gap-3">
+          <i className='bx bx-check text-blue-900 text-[20px]'></i>
+          <span>Instalación de software de computadoras</span>
+        </li>
+        <li className="flex items-center justify-center gap-3">
+          <i className='bx bx-check text-blue-900 text-[20px]'></i>
+          <span>Instalación de redes</span>
+        </li>
+        <li className="flex items-center justify-center gap-3">
+          <i className='bx bx-check text-blue-900 text-[20px]'></i>
+          <span>Programación (C++, Visual Basic, JavaScript, HTML, CSS)</span>
+        </li>
+        <li className="flex items-center justify-center gap-3">
+          <i className='bx bx-check text-blue-900 text-[20px]'></i>
+          <span>Aplicaciones de Diseño (Adobe Photoshop, Adobe Ilustrator, Corel Draw)</span>
+        </li>
+        <li className="flex items-center justify-center gap-3">
+          <i className='bx bx-check text-blue-900 text-[20px]'></i>
+          <span>Experiencia en elaboración de diseños (posters publicitarios, logotipos, isotipos y animaciones)</span>
+        </li>
+        <li className="flex items-center justify-center gap-3">
+          <i className='bx bx-check text-blue-900 text-[20px]'></i>
+          <span>Experiencia en configuración de equipos de redes (Mikrotik, OLT, Router, Switch)</span>
+        </li>
+        <li className="flex items-center justify-center gap-3">
+          <i className='bx bx-check text-blue-900 text-[20px]'></i>
+          <span>Experiencia en instalacion y reparación de servicios FTTH</span>
+        </li>
+      </ul>
+    </div>
+    </section>
+
+    <section id='proyectos'>
+      <h1 className='text-center font-bold text-4xl text-white my-10'> Proyectos </h1>
+
+      <div className='flex flex-col sm:flex-row h-auto w-full items-center justify-center gap-[50px] text-white px-5'>
+
+        <div className="flex bg-blue-900/20 drop-shadow-[0_0_10px_rgba(0,0,0,0.3)] rounded-[10px]  shadow-2xl shadow-blue-500/20 mb-20">
+              
+          <div>
+            <video className='w-full h-full max-w-96 object-fill sm:object-cover' autoPlay muted loop>
+              <source src={isSmallScreen ? "../Redes-tfn.mp4" : "../Redes.mp4" } type="video/mp4" />
+            </video>   
+          </div>
+    
+          <div className="p-[20px_15px] flex flex-col justify-between h-full gap-5">
+                  
+            <div className='flex flex-col gap-4'>
+              <div>
+                <h1 className='font-bold text-[20px]'>Holanet C.A</h1>
+                <a href='https://holanet.com.ve' className='font-bold'>https://holanet.com.ve</a>
+              </div>
+
+              <ul className='text-[11px] flex flex-col gap-2'>
+                <li className='flex gap-3'>
+                  <i className='bx bx-check text-blue-900 text-[20px]'></i>
+                  <p>Consulta las facturas pendiente de los clientes</p>
+                </li>
+                <li className='flex gap-3'>
+                <i className='bx bx-check text-blue-900 text-[20px]'></i>
+                  <p>Valida Pago movil mediante el Banco de Venezuela</p>
+                </li>
+                <li className='flex gap-3'>
+                  <i className='bx bx-check text-blue-900 text-[20px]'></i>
+                  <p>Realiza pagos desde un punto de venta virtual con el Banco de Venezuela</p>
+                </li>
+              </ul>
+            </div>
+
+            <div className='flex gap-5'>
+              <a href="https://nodejs.org/en">
+                <img src="../nodejs.png" alt="Nodejs" className='w-[50px]'/>
+              </a>
+              <a href="https://expressjs.com/">
+                <img src="../express.png" alt="express js" className='w-[50px]' />
+              </a>
+
+            </div>
+          
+          </div>
+        </div>
+      </div>
     </section>
     </>
   )

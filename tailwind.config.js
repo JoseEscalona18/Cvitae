@@ -8,6 +8,9 @@ module.exports = {
     fontSize: {
       's': '9px'
     },
+    scale: {
+      '101': '1.01',
+    },
     fontFamily: {
       'body': [
     'Inter', 
