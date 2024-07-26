@@ -236,11 +236,11 @@ function App() {
         </li>
         <li className="flex items-center justify-center gap-3">
           <i className='bx bx-check text-blue-900 text-[20px]'></i>
-          <span>Experiencia en configuración de equipos de redes (Mikrotik, OLT, Router, Switch)</span>
+          <span>Experiencia en configuración de equipos de redes (Mikrotik, OLTs, Router, Switch)</span>
         </li>
         <li className="flex items-center justify-center gap-3">
           <i className='bx bx-check text-blue-900 text-[20px]'></i>
-          <span>Experiencia en instalacion y reparación de servicios FTTH</span>
+          <span>Experiencia en instalación y reparación de servicios FTTH</span>
         </li>
       </ul>
     </div>
@@ -274,7 +274,7 @@ function App() {
                 </li>
                 <li className='flex gap-3'>
                 <i className='bx bx-check text-blue-900 text-[20px]'></i>
-                  <p>Valida Pago movil mediante el Banco de Venezuela</p>
+                  <p>Valida Pago móvil mediante el Banco de Venezuela</p>
                 </li>
                 <li className='flex gap-3'>
                   <i className='bx bx-check text-blue-900 text-[20px]'></i>
