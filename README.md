@@ -13,10 +13,10 @@ Este proyecto es una página web interactiva desarrollada con React y Tailwind C
 
 ### 🔵 Instalación y Uso
 
-- Clona este repositorio: git clone https://github.com/JoseEscalona18/Cvitae.git
-- Navega hasta el directorio del proyecto: cd Cvitae
-- Instala las dependencias: npm install
-- Inicia el servidor de desarrollo: npm run dev
+- **Clona este repositorio:** git clone https://github.com/JoseEscalona18/Cvitae.git
+- **Navega hasta el directorio del proyecto:** cd Cvitae
+- **Instala las dependencias:** npm install
+- **Inicia el servidor de desarrollo:** npm run dev
 - Abre tu navegador y visita [http://localhost:5173](http://localhost:5173/) para ver la aplicación en funcionamiento.
 
 ### 🔵 Tecnologías Utilizadas
